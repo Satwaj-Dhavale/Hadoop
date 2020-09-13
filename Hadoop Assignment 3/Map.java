@@ -16,8 +16,8 @@ public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
         String st [] = value.toString().split("\\s+");        
         for(String st1 :  st) {
    
-        	if(st1.startsWith("a")) {
-        		word.set("A_count");
+        	if(st1.startsWith("z")) {
+        		word.set("Z_count");
         		
         		context.write(word, new IntWritable(st1.length())); 
         	}
